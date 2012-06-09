@@ -15,6 +15,8 @@
 		C42A2A9B157E75BF002B8018 /* WSLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C42A2A9A157E75BF002B8018 /* WSLAppDelegate.m */; };
 		C42A2A9E157E75BF002B8018 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C42A2A9C157E75BF002B8018 /* MainStoryboard.storyboard */; };
 		C42A2AA1157E75BF002B8018 /* WSLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C42A2AA0157E75BF002B8018 /* WSLViewController.m */; };
+		C42A2AA9157E761E002B8018 /* WSLHTMLEntities.m in Sources */ = {isa = PBXBuildFile; fileRef = C42A2AA8157E761E002B8018 /* WSLHTMLEntities.m */; };
+		C49912AE15829D430000E0AD /* WSLHTMLEntities.lm in Sources */ = {isa = PBXBuildFile; fileRef = C49912AD15829D430000E0AD /* WSLHTMLEntities.lm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,15 +24,21 @@
 		C42A2A8A157E75BF002B8018 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C42A2A8C157E75BF002B8018 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C42A2A8E157E75BF002B8018 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		C42A2A92157E75BF002B8018 /* WSLHTMLEntities-Info.plist */ = {isa = PBXFileReference; path = "WSLHTMLEntities-Info.plist"; sourceTree = "<group>"; };
+		C42A2A92157E75BF002B8018 /* WSLHTMLEntities-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WSLHTMLEntities-Info.plist"; sourceTree = "<group>"; };
 		C42A2A94157E75BF002B8018 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C42A2A96157E75BF002B8018 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		C42A2A98157E75BF002B8018 /* WSLHTMLEntities-Prefix.pch */ = {isa = PBXFileReference; path = "WSLHTMLEntities-Prefix.pch"; sourceTree = "<group>"; };
-		C42A2A99157E75BF002B8018 /* WSLAppDelegate.h */ = {isa = PBXFileReference; path = WSLAppDelegate.h; sourceTree = "<group>"; };
+		C42A2A98157E75BF002B8018 /* WSLHTMLEntities-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WSLHTMLEntities-Prefix.pch"; sourceTree = "<group>"; };
+		C42A2A99157E75BF002B8018 /* WSLAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WSLAppDelegate.h; sourceTree = "<group>"; };
 		C42A2A9A157E75BF002B8018 /* WSLAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WSLAppDelegate.m; sourceTree = "<group>"; };
 		C42A2A9D157E75BF002B8018 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		C42A2A9F157E75BF002B8018 /* WSLViewController.h */ = {isa = PBXFileReference; path = WSLViewController.h; sourceTree = "<group>"; };
+		C42A2A9F157E75BF002B8018 /* WSLViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WSLViewController.h; sourceTree = "<group>"; };
 		C42A2AA0157E75BF002B8018 /* WSLViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WSLViewController.m; sourceTree = "<group>"; };
+		C42A2AA7157E761E002B8018 /* WSLHTMLEntities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSLHTMLEntities.h; sourceTree = "<group>"; };
+		C42A2AA8157E761E002B8018 /* WSLHTMLEntities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSLHTMLEntities.m; sourceTree = "<group>"; };
+		C49912AD15829D430000E0AD /* WSLHTMLEntities.lm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.lex; path = WSLHTMLEntities.lm; sourceTree = "<group>"; };
+		C49912AF158365AC0000E0AD /* WSLHTMLEntityDefinitions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WSLHTMLEntityDefinitions.h; sourceTree = "<group>"; };
+		C49912B3158386BE0000E0AD /* Entities.pm */ = {isa = PBXFileReference; lastKnownFileType = text.script.perl; path = Entities.pm; sourceTree = "<group>"; };
+		C49912B41583885B0000E0AD /* genEntitiesLexer.pl */ = {isa = PBXFileReference; lastKnownFileType = text.script.perl; path = genEntitiesLexer.pl; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +91,12 @@
 				C42A2A9F157E75BF002B8018 /* WSLViewController.h */,
 				C42A2AA0157E75BF002B8018 /* WSLViewController.m */,
 				C42A2A91157E75BF002B8018 /* Supporting Files */,
+				C42A2AA7157E761E002B8018 /* WSLHTMLEntities.h */,
+				C42A2AA8157E761E002B8018 /* WSLHTMLEntities.m */,
+				C49912AD15829D430000E0AD /* WSLHTMLEntities.lm */,
+				C49912AF158365AC0000E0AD /* WSLHTMLEntityDefinitions.h */,
+				C49912B3158386BE0000E0AD /* Entities.pm */,
+				C49912B41583885B0000E0AD /* genEntitiesLexer.pl */,
 			);
 			path = WSLHTMLEntities;
 			sourceTree = "<group>";
@@ -126,6 +140,7 @@
 			attributes = {
 				CLASSPREFIX = WSL;
 				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = "Wandle Software Limited";
 			};
 			buildConfigurationList = C42A2A80157E75BE002B8018 /* Build configuration list for PBXProject "WSLHTMLEntities" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -164,6 +179,8 @@
 				C42A2A97157E75BF002B8018 /* main.m in Sources */,
 				C42A2A9B157E75BF002B8018 /* WSLAppDelegate.m in Sources */,
 				C42A2AA1157E75BF002B8018 /* WSLViewController.m in Sources */,
+				C42A2AA9157E761E002B8018 /* WSLHTMLEntities.m in Sources */,
+				C49912AE15829D430000E0AD /* WSLHTMLEntities.lm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,6 +257,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WSLHTMLEntities/WSLHTMLEntities-Prefix.pch";
 				INFOPLIST_FILE = "WSLHTMLEntities/WSLHTMLEntities-Info.plist";
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -251,6 +269,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WSLHTMLEntities/WSLHTMLEntities-Prefix.pch";
 				INFOPLIST_FILE = "WSLHTMLEntities/WSLHTMLEntities-Info.plist";
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -275,6 +294,7 @@
 				C42A2AA6157E75BF002B8018 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

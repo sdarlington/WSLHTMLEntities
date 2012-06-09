@@ -1,0 +1,269 @@
+
+%{
+    /*
+    //
+    //  WSLHTMLEntities.lm
+    //  WSLHTMLEntities
+    //
+    //  Created by Stephen Darlington on 05/06/2012.
+    //  Copyright (c) 2012 Wandle Software Limited. All rights reserved.
+    //
+    */
+%}
+
+%option noyywrap prefix="WSL"
+
+%{
+
+    #import "WSLHTMLEntityDefinitions.h"
+    
+%}
+
+%%
+
+&AElig;   { return WSL_ENTITY_AElig; }
+&Aacute;   { return WSL_ENTITY_Aacute; }
+&Acirc;   { return WSL_ENTITY_Acirc; }
+&Agrave;   { return WSL_ENTITY_Agrave; }
+&Aring;   { return WSL_ENTITY_Aring; }
+&Atilde;   { return WSL_ENTITY_Atilde; }
+&Auml;   { return WSL_ENTITY_Auml; }
+&Ccedil;   { return WSL_ENTITY_Ccedil; }
+&ETH;   { return WSL_ENTITY_ETH; }
+&Eacute;   { return WSL_ENTITY_Eacute; }
+&Ecirc;   { return WSL_ENTITY_Ecirc; }
+&Egrave;   { return WSL_ENTITY_Egrave; }
+&Euml;   { return WSL_ENTITY_Euml; }
+&Iacute;   { return WSL_ENTITY_Iacute; }
+&Icirc;   { return WSL_ENTITY_Icirc; }
+&Igrave;   { return WSL_ENTITY_Igrave; }
+&Iuml;   { return WSL_ENTITY_Iuml; }
+&Ntilde;   { return WSL_ENTITY_Ntilde; }
+&Oacute;   { return WSL_ENTITY_Oacute; }
+&Ocirc;   { return WSL_ENTITY_Ocirc; }
+&Ograve;   { return WSL_ENTITY_Ograve; }
+&Oslash;   { return WSL_ENTITY_Oslash; }
+&Otilde;   { return WSL_ENTITY_Otilde; }
+&Ouml;   { return WSL_ENTITY_Ouml; }
+&THORN;   { return WSL_ENTITY_THORN; }
+&Uacute;   { return WSL_ENTITY_Uacute; }
+&Ucirc;   { return WSL_ENTITY_Ucirc; }
+&Ugrave;   { return WSL_ENTITY_Ugrave; }
+&Uuml;   { return WSL_ENTITY_Uuml; }
+&Yacute;   { return WSL_ENTITY_Yacute; }
+&aacute;   { return WSL_ENTITY_aacute; }
+&acirc;   { return WSL_ENTITY_acirc; }
+&aelig;   { return WSL_ENTITY_aelig; }
+&agrave;   { return WSL_ENTITY_agrave; }
+&aring;   { return WSL_ENTITY_aring; }
+&atilde;   { return WSL_ENTITY_atilde; }
+&auml;   { return WSL_ENTITY_auml; }
+&ccedil;   { return WSL_ENTITY_ccedil; }
+&eacute;   { return WSL_ENTITY_eacute; }
+&ecirc;   { return WSL_ENTITY_ecirc; }
+&egrave;   { return WSL_ENTITY_egrave; }
+&eth;   { return WSL_ENTITY_eth; }
+&euml;   { return WSL_ENTITY_euml; }
+&iacute;   { return WSL_ENTITY_iacute; }
+&icirc;   { return WSL_ENTITY_icirc; }
+&igrave;   { return WSL_ENTITY_igrave; }
+&iuml;   { return WSL_ENTITY_iuml; }
+&ntilde;   { return WSL_ENTITY_ntilde; }
+&oacute;   { return WSL_ENTITY_oacute; }
+&ocirc;   { return WSL_ENTITY_ocirc; }
+&ograve;   { return WSL_ENTITY_ograve; }
+&oslash;   { return WSL_ENTITY_oslash; }
+&otilde;   { return WSL_ENTITY_otilde; }
+&ouml;   { return WSL_ENTITY_ouml; }
+&szlig;   { return WSL_ENTITY_szlig; }
+&thorn;   { return WSL_ENTITY_thorn; }
+&uacute;   { return WSL_ENTITY_uacute; }
+&ucirc;   { return WSL_ENTITY_ucirc; }
+&ugrave;   { return WSL_ENTITY_ugrave; }
+&uuml;   { return WSL_ENTITY_uuml; }
+&yacute;   { return WSL_ENTITY_yacute; }
+&yuml;   { return WSL_ENTITY_yuml; }
+&copy;   { return WSL_ENTITY_copy; }
+&reg;   { return WSL_ENTITY_reg; }
+&nbsp;   { return WSL_ENTITY_nbsp; }
+&iexcl;   { return WSL_ENTITY_iexcl; }
+&cent;   { return WSL_ENTITY_cent; }
+&pound;   { return WSL_ENTITY_pound; }
+&curren;   { return WSL_ENTITY_curren; }
+&yen;   { return WSL_ENTITY_yen; }
+&brvbar;   { return WSL_ENTITY_brvbar; }
+&sect;   { return WSL_ENTITY_sect; }
+&uml;   { return WSL_ENTITY_uml; }
+&ordf;   { return WSL_ENTITY_ordf; }
+&laquo;   { return WSL_ENTITY_laquo; }
+&not;   { return WSL_ENTITY_not; }
+&shy;   { return WSL_ENTITY_shy; }
+&macr;   { return WSL_ENTITY_macr; }
+&deg;   { return WSL_ENTITY_deg; }
+&plusmn;   { return WSL_ENTITY_plusmn; }
+&acute;   { return WSL_ENTITY_acute; }
+&micro;   { return WSL_ENTITY_micro; }
+&para;   { return WSL_ENTITY_para; }
+&middot;   { return WSL_ENTITY_middot; }
+&cedil;   { return WSL_ENTITY_cedil; }
+&ordm;   { return WSL_ENTITY_ordm; }
+&raquo;   { return WSL_ENTITY_raquo; }
+&iquest;   { return WSL_ENTITY_iquest; }
+&times;   { return WSL_ENTITY_times; }
+&divide;   { return WSL_ENTITY_divide; }
+&OElig;   { return WSL_ENTITY_OElig; }
+&oelig;   { return WSL_ENTITY_oelig; }
+&Scaron;   { return WSL_ENTITY_Scaron; }
+&scaron;   { return WSL_ENTITY_scaron; }
+&Yuml;   { return WSL_ENTITY_Yuml; }
+&fnof;   { return WSL_ENTITY_fnof; }
+&circ;   { return WSL_ENTITY_circ; }
+&tilde;   { return WSL_ENTITY_tilde; }
+&Alpha;   { return WSL_ENTITY_Alpha; }
+&Beta;   { return WSL_ENTITY_Beta; }
+&Gamma;   { return WSL_ENTITY_Gamma; }
+&Delta;   { return WSL_ENTITY_Delta; }
+&Epsilon;   { return WSL_ENTITY_Epsilon; }
+&Zeta;   { return WSL_ENTITY_Zeta; }
+&Eta;   { return WSL_ENTITY_Eta; }
+&Theta;   { return WSL_ENTITY_Theta; }
+&Iota;   { return WSL_ENTITY_Iota; }
+&Kappa;   { return WSL_ENTITY_Kappa; }
+&Lambda;   { return WSL_ENTITY_Lambda; }
+&Mu;   { return WSL_ENTITY_Mu; }
+&Nu;   { return WSL_ENTITY_Nu; }
+&Xi;   { return WSL_ENTITY_Xi; }
+&Omicron;   { return WSL_ENTITY_Omicron; }
+&Pi;   { return WSL_ENTITY_Pi; }
+&Rho;   { return WSL_ENTITY_Rho; }
+&Sigma;   { return WSL_ENTITY_Sigma; }
+&Tau;   { return WSL_ENTITY_Tau; }
+&Upsilon;   { return WSL_ENTITY_Upsilon; }
+&Phi;   { return WSL_ENTITY_Phi; }
+&Chi;   { return WSL_ENTITY_Chi; }
+&Psi;   { return WSL_ENTITY_Psi; }
+&Omega;   { return WSL_ENTITY_Omega; }
+&alpha;   { return WSL_ENTITY_alpha; }
+&beta;   { return WSL_ENTITY_beta; }
+&gamma;   { return WSL_ENTITY_gamma; }
+&delta;   { return WSL_ENTITY_delta; }
+&epsilon;   { return WSL_ENTITY_epsilon; }
+&zeta;   { return WSL_ENTITY_zeta; }
+&eta;   { return WSL_ENTITY_eta; }
+&theta;   { return WSL_ENTITY_theta; }
+&iota;   { return WSL_ENTITY_iota; }
+&kappa;   { return WSL_ENTITY_kappa; }
+&lambda;   { return WSL_ENTITY_lambda; }
+&mu;   { return WSL_ENTITY_mu; }
+&nu;   { return WSL_ENTITY_nu; }
+&xi;   { return WSL_ENTITY_xi; }
+&omicron;   { return WSL_ENTITY_omicron; }
+&pi;   { return WSL_ENTITY_pi; }
+&rho;   { return WSL_ENTITY_rho; }
+&sigmaf;   { return WSL_ENTITY_sigmaf; }
+&sigma;   { return WSL_ENTITY_sigma; }
+&tau;   { return WSL_ENTITY_tau; }
+&upsilon;   { return WSL_ENTITY_upsilon; }
+&phi;   { return WSL_ENTITY_phi; }
+&chi;   { return WSL_ENTITY_chi; }
+&psi;   { return WSL_ENTITY_psi; }
+&omega;   { return WSL_ENTITY_omega; }
+&thetasym;   { return WSL_ENTITY_thetasym; }
+&upsih;   { return WSL_ENTITY_upsih; }
+&piv;   { return WSL_ENTITY_piv; }
+&ensp;   { return WSL_ENTITY_ensp; }
+&emsp;   { return WSL_ENTITY_emsp; }
+&thinsp;   { return WSL_ENTITY_thinsp; }
+&zwnj;   { return WSL_ENTITY_zwnj; }
+&zwj;   { return WSL_ENTITY_zwj; }
+&lrm;   { return WSL_ENTITY_lrm; }
+&rlm;   { return WSL_ENTITY_rlm; }
+&ndash;   { return WSL_ENTITY_ndash; }
+&mdash;   { return WSL_ENTITY_mdash; }
+&lsquo;   { return WSL_ENTITY_lsquo; }
+&rsquo;   { return WSL_ENTITY_rsquo; }
+&sbquo;   { return WSL_ENTITY_sbquo; }
+&ldquo;   { return WSL_ENTITY_ldquo; }
+&rdquo;   { return WSL_ENTITY_rdquo; }
+&bdquo;   { return WSL_ENTITY_bdquo; }
+&dagger;   { return WSL_ENTITY_dagger; }
+&Dagger;   { return WSL_ENTITY_Dagger; }
+&bull;   { return WSL_ENTITY_bull; }
+&hellip;   { return WSL_ENTITY_hellip; }
+&permil;   { return WSL_ENTITY_permil; }
+&prime;   { return WSL_ENTITY_prime; }
+&Prime;   { return WSL_ENTITY_Prime; }
+&lsaquo;   { return WSL_ENTITY_lsaquo; }
+&rsaquo;   { return WSL_ENTITY_rsaquo; }
+&oline;   { return WSL_ENTITY_oline; }
+&frasl;   { return WSL_ENTITY_frasl; }
+&euro;   { return WSL_ENTITY_euro; }
+&image;   { return WSL_ENTITY_image; }
+&weierp;   { return WSL_ENTITY_weierp; }
+&real;   { return WSL_ENTITY_real; }
+&trade;   { return WSL_ENTITY_trade; }
+&alefsym;   { return WSL_ENTITY_alefsym; }
+&larr;   { return WSL_ENTITY_larr; }
+&uarr;   { return WSL_ENTITY_uarr; }
+&rarr;   { return WSL_ENTITY_rarr; }
+&darr;   { return WSL_ENTITY_darr; }
+&harr;   { return WSL_ENTITY_harr; }
+&crarr;   { return WSL_ENTITY_crarr; }
+&lArr;   { return WSL_ENTITY_lArr; }
+&uArr;   { return WSL_ENTITY_uArr; }
+&rArr;   { return WSL_ENTITY_rArr; }
+&dArr;   { return WSL_ENTITY_dArr; }
+&hArr;   { return WSL_ENTITY_hArr; }
+&forall;   { return WSL_ENTITY_forall; }
+&part;   { return WSL_ENTITY_part; }
+&exist;   { return WSL_ENTITY_exist; }
+&empty;   { return WSL_ENTITY_empty; }
+&nabla;   { return WSL_ENTITY_nabla; }
+&isin;   { return WSL_ENTITY_isin; }
+&notin;   { return WSL_ENTITY_notin; }
+&ni;   { return WSL_ENTITY_ni; }
+&prod;   { return WSL_ENTITY_prod; }
+&sum;   { return WSL_ENTITY_sum; }
+&minus;   { return WSL_ENTITY_minus; }
+&lowast;   { return WSL_ENTITY_lowast; }
+&radic;   { return WSL_ENTITY_radic; }
+&prop;   { return WSL_ENTITY_prop; }
+&infin;   { return WSL_ENTITY_infin; }
+&ang;   { return WSL_ENTITY_ang; }
+&and;   { return WSL_ENTITY_and; }
+&or;   { return WSL_ENTITY_or; }
+&cap;   { return WSL_ENTITY_cap; }
+&cup;   { return WSL_ENTITY_cup; }
+&int;   { return WSL_ENTITY_int; }
+&sim;   { return WSL_ENTITY_sim; }
+&cong;   { return WSL_ENTITY_cong; }
+&asymp;   { return WSL_ENTITY_asymp; }
+&ne;   { return WSL_ENTITY_ne; }
+&equiv;   { return WSL_ENTITY_equiv; }
+&le;   { return WSL_ENTITY_le; }
+&ge;   { return WSL_ENTITY_ge; }
+&sub;   { return WSL_ENTITY_sub; }
+&sup;   { return WSL_ENTITY_sup; }
+&nsub;   { return WSL_ENTITY_nsub; }
+&sube;   { return WSL_ENTITY_sube; }
+&supe;   { return WSL_ENTITY_supe; }
+&oplus;   { return WSL_ENTITY_oplus; }
+&otimes;   { return WSL_ENTITY_otimes; }
+&perp;   { return WSL_ENTITY_perp; }
+&sdot;   { return WSL_ENTITY_sdot; }
+&lceil;   { return WSL_ENTITY_lceil; }
+&rceil;   { return WSL_ENTITY_rceil; }
+&lfloor;   { return WSL_ENTITY_lfloor; }
+&rfloor;   { return WSL_ENTITY_rfloor; }
+&lang;   { return WSL_ENTITY_lang; }
+&rang;   { return WSL_ENTITY_rang; }
+&loz;   { return WSL_ENTITY_loz; }
+&spades;   { return WSL_ENTITY_spades; }
+&clubs;   { return WSL_ENTITY_clubs; }
+&hearts;   { return WSL_ENTITY_hearts; }
+&diams;   { return WSL_ENTITY_diams; }
+
+. { return WSL_ENTITIY_NOTB; } 
+
+%%
+
