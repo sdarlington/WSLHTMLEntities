@@ -25,7 +25,7 @@ extern char *WSLtext;
         // TODO: there has to be a more efficient way of doing this...
         switch (expression) {
             case WSL_ENTITIY_NOTB:
-                [output appendFormat:@"%c", *WSLtext];
+                [output appendFormat:@"%s", WSLtext];
                 break;
             case WSL_ENTITIY_NUMBER:
                 expression = atoi(&WSLtext[2]);
