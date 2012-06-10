@@ -269,8 +269,8 @@
 &diams;   { return WSL_ENTITY_diams; }
 
 &#[0-9]+;  { return WSL_ENTITIY_NUMBER; }
-.*/& { return WSL_ENTITIY_NOTB; } 
-. { return WSL_ENTITIY_NOTB; } 
+.*/& { return WSL_ENTITIY_NOMATCH; } 
+. { return WSL_ENTITIY_NOMATCH; } 
 
 %%
 

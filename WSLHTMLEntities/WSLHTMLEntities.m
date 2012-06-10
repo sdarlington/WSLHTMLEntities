@@ -24,7 +24,7 @@ extern char *WSLtext;
     while ((expression = WSLlex())) {
         // TODO: there has to be a more efficient way of doing this...
         switch (expression) {
-            case WSL_ENTITIY_NOTB:
+            case WSL_ENTITIY_NOMATCH:
                 [output appendFormat:@"%s", WSLtext];
                 break;
             case WSL_ENTITIY_NUMBER:

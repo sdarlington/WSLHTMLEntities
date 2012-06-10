@@ -17,7 +17,7 @@ use warnings;
 
 foreach (@ARGV) {
   open (FH, $_) or die;
-  print "#define WSL_ENTITIY_NOTB -1\n";
+  print "#define WSL_ENTITIY_NOMATCH -1\n";
   while (<FH>) {
     chomp;
       my ($entity,$char,$comment) = m/^\s*'?([a-zA-Z]+);?'?\s+=>\s+chr\((\d+)\),(\s+# (.*))?$/;
