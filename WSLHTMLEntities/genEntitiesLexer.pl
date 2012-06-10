@@ -22,7 +22,11 @@ foreach (@ARGV) {
     chomp;
       my ($entity,$char,$comment) = m/^\s*'?([a-zA-Z]+);?'?\s+=>\s+chr\((\d+)\),(\s+# (.*))?$/;
       if (not defined $entity) {
-        next;
+        ($entity,$char,$comment) = m/^\s*'?([a-zA-Z]+);?'?\s+=>\s+['"](.+)['"],(\s+# (.*))?$/;
+        $char = ord($char) if defined $char;
+      }
+      if (not defined $entity) {
+          next;
       }
       print "#define WSL_ENTITY_$entity $char";
       print " // $comment" if defined $comment;

@@ -21,6 +21,11 @@
 
 %%
 
+&amp;   { return WSL_ENTITY_amp; }
+&gt;   { return WSL_ENTITY_gt; }
+&lt;   { return WSL_ENTITY_lt; }
+&quot;   { return WSL_ENTITY_quot; }
+&apos;   { return WSL_ENTITY_apos; }
 &AElig;   { return WSL_ENTITY_AElig; }
 &Aacute;   { return WSL_ENTITY_Aacute; }
 &Acirc;   { return WSL_ENTITY_Acirc; }

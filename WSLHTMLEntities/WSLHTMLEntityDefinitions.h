@@ -10,6 +10,11 @@
 #define WSLHTMLEntities_WSLHTMLEntityDefinitions_h
 
 #define WSL_ENTITIY_NOTB -1
+#define WSL_ENTITY_amp 38 //   # ampersand 
+#define WSL_ENTITY_gt 62 //   # greater than
+#define WSL_ENTITY_lt 60 //   # less than
+#define WSL_ENTITY_quot 34 //   # double quote
+#define WSL_ENTITY_apos 39 //   # single quote
 #define WSL_ENTITY_AElig 198 //   # capital AE diphthong (ligature)
 #define WSL_ENTITY_Aacute 193 //   # capital A, acute accent
 #define WSL_ENTITY_Acirc 194 //   # capital A, circumflex accent
