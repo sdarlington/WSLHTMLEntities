@@ -10,6 +10,7 @@
 #define WSLHTMLEntities_WSLHTMLEntityDefinitions_h
 
 #define WSL_ENTITIY_NOTB -1
+#define WSL_ENTITIY_NUMBER -2
 #define WSL_ENTITY_amp 38 //   # ampersand 
 #define WSL_ENTITY_gt 62 //   # greater than
 #define WSL_ENTITY_lt 60 //   # less than

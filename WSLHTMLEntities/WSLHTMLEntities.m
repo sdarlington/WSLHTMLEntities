@@ -23,11 +23,16 @@ extern char *WSLtext;
     NSMutableString* output = [NSMutableString string];
     while ((expression = WSLlex())) {
         // TODO: there has to be a more efficient way of doing this...
-        if (expression == WSL_ENTITIY_NOTB) {
-            [output appendFormat:@"%c", *WSLtext];
-        }
-        else {
-            [output appendFormat:@"%C", expression];
+        switch (expression) {
+            case WSL_ENTITIY_NOTB:
+                [output appendFormat:@"%c", *WSLtext];
+                break;
+            case WSL_ENTITIY_NUMBER:
+                expression = atoi(&WSLtext[2]);
+                // fall through so expression is added to string
+            default:
+                [output appendFormat:@"%C", expression];
+                break;
         }
     }
 
