@@ -31,7 +31,7 @@ extern char *WSLtext;
                 expression = atoi(&WSLtext[2]);
                 // fall through so expression is added to string
             default:
-                [output appendFormat:@"%C", expression];
+                [output appendFormat:@"%C", (unsigned short) expression];
                 break;
         }
     }
