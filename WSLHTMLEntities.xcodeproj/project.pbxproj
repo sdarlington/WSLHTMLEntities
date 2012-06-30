@@ -37,7 +37,6 @@
 		C42A2AA8157E761E002B8018 /* WSLHTMLEntities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSLHTMLEntities.m; sourceTree = "<group>"; };
 		C49912AD15829D430000E0AD /* WSLHTMLEntities.lm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.lex; path = WSLHTMLEntities.lm; sourceTree = "<group>"; };
 		C49912AF158365AC0000E0AD /* WSLHTMLEntityDefinitions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WSLHTMLEntityDefinitions.h; sourceTree = "<group>"; };
-		C49912B3158386BE0000E0AD /* Entities.pm */ = {isa = PBXFileReference; lastKnownFileType = text.script.perl; path = Entities.pm; sourceTree = "<group>"; };
 		C49912B41583885B0000E0AD /* genEntitiesLexer.pl */ = {isa = PBXFileReference; lastKnownFileType = text.script.perl; path = genEntitiesLexer.pl; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -95,7 +94,6 @@
 				C42A2AA8157E761E002B8018 /* WSLHTMLEntities.m */,
 				C49912AD15829D430000E0AD /* WSLHTMLEntities.lm */,
 				C49912AF158365AC0000E0AD /* WSLHTMLEntityDefinitions.h */,
-				C49912B3158386BE0000E0AD /* Entities.pm */,
 				C49912B41583885B0000E0AD /* genEntitiesLexer.pl */,
 			);
 			path = WSLHTMLEntities;

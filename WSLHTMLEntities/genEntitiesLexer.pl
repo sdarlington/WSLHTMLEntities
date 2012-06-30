@@ -11,6 +11,10 @@
 
 # Generate (most of) WSLHTMLEntityDefinitions.h (stdout) and WSLHTMLEntities.lm
 # from the HTML::Entities Perl module.
+# 
+# Get the HTML::Entities file from http://cpansearch.perl.org/src/GAAS/HTML-Parser-3.69/lib/HTML/Entities.pm
+# (Not included here because GitHub finds more Perl in the project and assumes
+# that it's not an Objective-C project.)
 
 use strict;
 use warnings;
