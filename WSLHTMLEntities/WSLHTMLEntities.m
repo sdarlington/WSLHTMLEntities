@@ -17,12 +17,12 @@ extern int WSLlex_destroy();
 extern char *WSLtext;
 
 +(NSString*)convertHTMLtoString:(NSString*)html {
-    if (! [html canBeConvertedToEncoding:NSUTF8StringEncoding]) {
+    if (! [html canBeConvertedToEncoding:NSISOLatin1StringEncoding]) {
         // if it's not UTF8 I'm not sure what to do with it...
         return html;
     }
     
-    const char* text = [html UTF8String];
+    const char* text = [html cStringUsingEncoding:NSISOLatin1StringEncoding];
     WSL_scan_string(text);
     int expression;
     NSMutableString* output = [NSMutableString string];
@@ -30,7 +30,7 @@ extern char *WSLtext;
         // TODO: there has to be a more efficient way of doing this...
         switch (expression) {
             case WSL_ENTITIY_NOMATCH:
-                [output appendFormat:@"%s", WSLtext];
+                [output appendFormat:@"%@", [NSString stringWithCString:WSLtext encoding:NSISOLatin1StringEncoding]];
                 break;
             case WSL_ENTITIY_NUMBER:
                 expression = atoi(&WSLtext[2]);
