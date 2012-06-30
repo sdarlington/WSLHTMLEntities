@@ -17,6 +17,11 @@ extern int WSLlex_destroy();
 extern char *WSLtext;
 
 +(NSString*)convertHTMLtoString:(NSString*)html {
+    if (! [html canBeConvertedToEncoding:NSUTF8StringEncoding]) {
+        // if it's not UTF8 I'm not sure what to do with it...
+        return html;
+    }
+    
     const char* text = [html UTF8String];
     WSL_scan_string(text);
     int expression;
