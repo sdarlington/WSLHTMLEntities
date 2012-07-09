@@ -15,9 +15,24 @@
 		C42A2A9B157E75BF002B8018 /* WSLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C42A2A9A157E75BF002B8018 /* WSLAppDelegate.m */; };
 		C42A2A9E157E75BF002B8018 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C42A2A9C157E75BF002B8018 /* MainStoryboard.storyboard */; };
 		C42A2AA1157E75BF002B8018 /* WSLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C42A2AA0157E75BF002B8018 /* WSLViewController.m */; };
-		C42A2AA9157E761E002B8018 /* WSLHTMLEntities.m in Sources */ = {isa = PBXBuildFile; fileRef = C42A2AA8157E761E002B8018 /* WSLHTMLEntities.m */; };
-		C49912AE15829D430000E0AD /* WSLHTMLEntities.lm in Sources */ = {isa = PBXBuildFile; fileRef = C49912AD15829D430000E0AD /* WSLHTMLEntities.lm */; };
+		C497F2D015AAE43600DAB756 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C42A2A8C157E75BF002B8018 /* Foundation.framework */; };
+		C497F2DA15AAE4AA00DAB756 /* WSLHTMLEntities.h in Headers */ = {isa = PBXBuildFile; fileRef = C42A2AA7157E761E002B8018 /* WSLHTMLEntities.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C497F2DB15AAE4C100DAB756 /* WSLHTMLEntityDefinitions.h in Headers */ = {isa = PBXBuildFile; fileRef = C49912AF158365AC0000E0AD /* WSLHTMLEntityDefinitions.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		C497F2DC15AAE4C700DAB756 /* WSLHTMLEntities.m in Sources */ = {isa = PBXBuildFile; fileRef = C42A2AA8157E761E002B8018 /* WSLHTMLEntities.m */; };
+		C497F2DD15AAE4C900DAB756 /* WSLHTMLEntities.lm in Sources */ = {isa = PBXBuildFile; fileRef = C49912AD15829D430000E0AD /* WSLHTMLEntities.lm */; };
+		C497F2DE15AAE4E900DAB756 /* libWSLHTMLEntities.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C497F2CF15AAE43600DAB756 /* libWSLHTMLEntities.a */; };
+		C497F2E115AAE5E300DAB756 /* WSLHTMLEntities-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = C42A2A98157E75BF002B8018 /* WSLHTMLEntities-Prefix.pch */; settings = {ATTRIBUTES = (Private, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C497F2DF15AAE4FE00DAB756 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C42A2A7D157E75BE002B8018 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C497F2CE15AAE43600DAB756;
+			remoteInfo = WSLHTMLEntities;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		C42A2A86157E75BF002B8018 /* WSLHTMLEntities.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WSLHTMLEntities.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -35,6 +50,7 @@
 		C42A2AA0157E75BF002B8018 /* WSLViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WSLViewController.m; sourceTree = "<group>"; };
 		C42A2AA7157E761E002B8018 /* WSLHTMLEntities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSLHTMLEntities.h; sourceTree = "<group>"; };
 		C42A2AA8157E761E002B8018 /* WSLHTMLEntities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSLHTMLEntities.m; sourceTree = "<group>"; };
+		C497F2CF15AAE43600DAB756 /* libWSLHTMLEntities.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libWSLHTMLEntities.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C49912AD15829D430000E0AD /* WSLHTMLEntities.lm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.lex; path = WSLHTMLEntities.lm; sourceTree = "<group>"; };
 		C49912AF158365AC0000E0AD /* WSLHTMLEntityDefinitions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WSLHTMLEntityDefinitions.h; sourceTree = "<group>"; };
 		C49912B41583885B0000E0AD /* genEntitiesLexer.pl */ = {isa = PBXFileReference; lastKnownFileType = text.script.perl; path = genEntitiesLexer.pl; sourceTree = "<group>"; };
@@ -45,9 +61,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C497F2DE15AAE4E900DAB756 /* libWSLHTMLEntities.a in Frameworks */,
 				C42A2A8B157E75BF002B8018 /* UIKit.framework in Frameworks */,
 				C42A2A8D157E75BF002B8018 /* Foundation.framework in Frameworks */,
 				C42A2A8F157E75BF002B8018 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C497F2CC15AAE43600DAB756 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C497F2D015AAE43600DAB756 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,7 +82,8 @@
 		C42A2A7B157E75BE002B8018 = {
 			isa = PBXGroup;
 			children = (
-				C42A2A90157E75BF002B8018 /* WSLHTMLEntities */,
+				C42A2A90157E75BF002B8018 /* WSLHTMLEntities Sample */,
+				C497F2E215AAE63900DAB756 /* WSLHTMLEntities Library */,
 				C42A2A89157E75BF002B8018 /* Frameworks */,
 				C42A2A87157E75BF002B8018 /* Products */,
 			);
@@ -67,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				C42A2A86157E75BF002B8018 /* WSLHTMLEntities.app */,
+				C497F2CF15AAE43600DAB756 /* libWSLHTMLEntities.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -81,7 +108,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		C42A2A90157E75BF002B8018 /* WSLHTMLEntities */ = {
+		C42A2A90157E75BF002B8018 /* WSLHTMLEntities Sample */ = {
 			isa = PBXGroup;
 			children = (
 				C42A2A99157E75BF002B8018 /* WSLAppDelegate.h */,
@@ -90,12 +117,8 @@
 				C42A2A9F157E75BF002B8018 /* WSLViewController.h */,
 				C42A2AA0157E75BF002B8018 /* WSLViewController.m */,
 				C42A2A91157E75BF002B8018 /* Supporting Files */,
-				C42A2AA7157E761E002B8018 /* WSLHTMLEntities.h */,
-				C42A2AA8157E761E002B8018 /* WSLHTMLEntities.m */,
-				C49912AD15829D430000E0AD /* WSLHTMLEntities.lm */,
-				C49912AF158365AC0000E0AD /* WSLHTMLEntityDefinitions.h */,
-				C49912B41583885B0000E0AD /* genEntitiesLexer.pl */,
 			);
+			name = "WSLHTMLEntities Sample";
 			path = WSLHTMLEntities;
 			sourceTree = "<group>";
 		};
@@ -110,12 +133,38 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		C497F2E215AAE63900DAB756 /* WSLHTMLEntities Library */ = {
+			isa = PBXGroup;
+			children = (
+				C42A2AA7157E761E002B8018 /* WSLHTMLEntities.h */,
+				C42A2AA8157E761E002B8018 /* WSLHTMLEntities.m */,
+				C49912AD15829D430000E0AD /* WSLHTMLEntities.lm */,
+				C49912AF158365AC0000E0AD /* WSLHTMLEntityDefinitions.h */,
+				C49912B41583885B0000E0AD /* genEntitiesLexer.pl */,
+			);
+			name = "WSLHTMLEntities Library";
+			path = WSLHTMLEntities;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		C497F2CD15AAE43600DAB756 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C497F2DA15AAE4AA00DAB756 /* WSLHTMLEntities.h in Headers */,
+				C497F2DB15AAE4C100DAB756 /* WSLHTMLEntityDefinitions.h in Headers */,
+				C497F2E115AAE5E300DAB756 /* WSLHTMLEntities-Prefix.pch in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
-		C42A2A85157E75BF002B8018 /* WSLHTMLEntities */ = {
+		C42A2A85157E75BF002B8018 /* WSLHTMLEntities Sample */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C42A2AA4157E75BF002B8018 /* Build configuration list for PBXNativeTarget "WSLHTMLEntities" */;
+			buildConfigurationList = C42A2AA4157E75BF002B8018 /* Build configuration list for PBXNativeTarget "WSLHTMLEntities Sample" */;
 			buildPhases = (
 				C42A2A82157E75BF002B8018 /* Sources */,
 				C42A2A83157E75BF002B8018 /* Frameworks */,
@@ -124,11 +173,29 @@
 			buildRules = (
 			);
 			dependencies = (
+				C497F2E015AAE4FE00DAB756 /* PBXTargetDependency */,
 			);
-			name = WSLHTMLEntities;
+			name = "WSLHTMLEntities Sample";
 			productName = WSLHTMLEntities;
 			productReference = C42A2A86157E75BF002B8018 /* WSLHTMLEntities.app */;
 			productType = "com.apple.product-type.application";
+		};
+		C497F2CE15AAE43600DAB756 /* WSLHTMLEntities */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C497F2D715AAE43600DAB756 /* Build configuration list for PBXNativeTarget "WSLHTMLEntities" */;
+			buildPhases = (
+				C497F2CB15AAE43600DAB756 /* Sources */,
+				C497F2CC15AAE43600DAB756 /* Frameworks */,
+				C497F2CD15AAE43600DAB756 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WSLHTMLEntities;
+			productName = WSLHTMLEntities;
+			productReference = C497F2CF15AAE43600DAB756 /* libWSLHTMLEntities.a */;
+			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
 
@@ -152,7 +219,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C42A2A85157E75BF002B8018 /* WSLHTMLEntities */,
+				C42A2A85157E75BF002B8018 /* WSLHTMLEntities Sample */,
+				C497F2CE15AAE43600DAB756 /* WSLHTMLEntities */,
 			);
 		};
 /* End PBXProject section */
@@ -177,12 +245,27 @@
 				C42A2A97157E75BF002B8018 /* main.m in Sources */,
 				C42A2A9B157E75BF002B8018 /* WSLAppDelegate.m in Sources */,
 				C42A2AA1157E75BF002B8018 /* WSLViewController.m in Sources */,
-				C42A2AA9157E761E002B8018 /* WSLHTMLEntities.m in Sources */,
-				C49912AE15829D430000E0AD /* WSLHTMLEntities.lm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C497F2CB15AAE43600DAB756 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C497F2DC15AAE4C700DAB756 /* WSLHTMLEntities.m in Sources */,
+				C497F2DD15AAE4C900DAB756 /* WSLHTMLEntities.lm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C497F2E015AAE4FE00DAB756 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C497F2CE15AAE43600DAB756 /* WSLHTMLEntities */;
+			targetProxy = C497F2DF15AAE4FE00DAB756 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		C42A2A93157E75BF002B8018 /* InfoPlist.strings */ = {
@@ -273,6 +356,30 @@
 			};
 			name = Release;
 		};
+		C497F2D815AAE43600DAB756 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/WSLHTMLEntities.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WSLHTMLEntities/WSLHTMLEntities-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		C497F2D915AAE43600DAB756 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/WSLHTMLEntities.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WSLHTMLEntities/WSLHTMLEntities-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -285,7 +392,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C42A2AA4157E75BF002B8018 /* Build configuration list for PBXNativeTarget "WSLHTMLEntities" */ = {
+		C42A2AA4157E75BF002B8018 /* Build configuration list for PBXNativeTarget "WSLHTMLEntities Sample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C42A2AA5157E75BF002B8018 /* Debug */,
@@ -293,6 +400,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		C497F2D715AAE43600DAB756 /* Build configuration list for PBXNativeTarget "WSLHTMLEntities" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C497F2D815AAE43600DAB756 /* Debug */,
+				C497F2D915AAE43600DAB756 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
