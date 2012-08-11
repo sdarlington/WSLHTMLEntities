@@ -35,7 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		C42A2A86157E75BF002B8018 /* WSLHTMLEntities.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WSLHTMLEntities.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C42A2A86157E75BF002B8018 /* WSLHTMLEntities Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WSLHTMLEntities Sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C42A2A8A157E75BF002B8018 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C42A2A8C157E75BF002B8018 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C42A2A8E157E75BF002B8018 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -48,7 +48,7 @@
 		C42A2A9D157E75BF002B8018 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		C42A2A9F157E75BF002B8018 /* WSLViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WSLViewController.h; sourceTree = "<group>"; };
 		C42A2AA0157E75BF002B8018 /* WSLViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WSLViewController.m; sourceTree = "<group>"; };
-		C42A2AA7157E761E002B8018 /* WSLHTMLEntities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSLHTMLEntities.h; sourceTree = "<group>"; };
+		C42A2AA7157E761E002B8018 /* WSLHTMLEntities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WSLHTMLEntities.h; path = ../WSLHTMLEntities.h; sourceTree = "<group>"; };
 		C42A2AA8157E761E002B8018 /* WSLHTMLEntities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSLHTMLEntities.m; sourceTree = "<group>"; };
 		C497F2CF15AAE43600DAB756 /* libWSLHTMLEntities.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libWSLHTMLEntities.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C49912AD15829D430000E0AD /* WSLHTMLEntities.lm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.lex; path = WSLHTMLEntities.lm; sourceTree = "<group>"; };
@@ -92,7 +92,7 @@
 		C42A2A87157E75BF002B8018 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C42A2A86157E75BF002B8018 /* WSLHTMLEntities.app */,
+				C42A2A86157E75BF002B8018 /* WSLHTMLEntities Sample.app */,
 				C497F2CF15AAE43600DAB756 /* libWSLHTMLEntities.a */,
 			);
 			name = Products;
@@ -177,7 +177,7 @@
 			);
 			name = "WSLHTMLEntities Sample";
 			productName = WSLHTMLEntities;
-			productReference = C42A2A86157E75BF002B8018 /* WSLHTMLEntities.app */;
+			productReference = C42A2A86157E75BF002B8018 /* WSLHTMLEntities Sample.app */;
 			productType = "com.apple.product-type.application";
 		};
 		C497F2CE15AAE43600DAB756 /* WSLHTMLEntities */ = {
@@ -408,6 +408,7 @@
 				C497F2D915AAE43600DAB756 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
