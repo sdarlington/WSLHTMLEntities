@@ -40,6 +40,8 @@ extern char *WSLtext;
                 break;
         }
     }
+    
+    WSLlex_destroy();
 
     return output;
 }
