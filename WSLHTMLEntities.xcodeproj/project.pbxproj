@@ -16,12 +16,12 @@
 		C42A2A9E157E75BF002B8018 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C42A2A9C157E75BF002B8018 /* MainStoryboard.storyboard */; };
 		C42A2AA1157E75BF002B8018 /* WSLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C42A2AA0157E75BF002B8018 /* WSLViewController.m */; };
 		C497F2D015AAE43600DAB756 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C42A2A8C157E75BF002B8018 /* Foundation.framework */; };
-		C497F2DA15AAE4AA00DAB756 /* WSLHTMLEntities.h in Headers */ = {isa = PBXBuildFile; fileRef = C42A2AA7157E761E002B8018 /* WSLHTMLEntities.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C497F2DB15AAE4C100DAB756 /* WSLHTMLEntityDefinitions.h in Headers */ = {isa = PBXBuildFile; fileRef = C49912AF158365AC0000E0AD /* WSLHTMLEntityDefinitions.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		C497F2DA15AAE4AA00DAB756 /* WSLHTMLEntities.h in Headers */ = {isa = PBXBuildFile; fileRef = C42A2AA7157E761E002B8018 /* WSLHTMLEntities.h */; settings = {ATTRIBUTES = (); }; };
+		C497F2DB15AAE4C100DAB756 /* WSLHTMLEntityDefinitions.h in Headers */ = {isa = PBXBuildFile; fileRef = C49912AF158365AC0000E0AD /* WSLHTMLEntityDefinitions.h */; settings = {ATTRIBUTES = (); }; };
 		C497F2DC15AAE4C700DAB756 /* WSLHTMLEntities.m in Sources */ = {isa = PBXBuildFile; fileRef = C42A2AA8157E761E002B8018 /* WSLHTMLEntities.m */; };
 		C497F2DD15AAE4C900DAB756 /* WSLHTMLEntities.lm in Sources */ = {isa = PBXBuildFile; fileRef = C49912AD15829D430000E0AD /* WSLHTMLEntities.lm */; };
 		C497F2DE15AAE4E900DAB756 /* libWSLHTMLEntities.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C497F2CF15AAE43600DAB756 /* libWSLHTMLEntities.a */; };
-		C497F2E115AAE5E300DAB756 /* WSLHTMLEntities-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = C42A2A98157E75BF002B8018 /* WSLHTMLEntities-Prefix.pch */; settings = {ATTRIBUTES = (Private, ); }; };
+		C497F2E115AAE5E300DAB756 /* WSLHTMLEntities-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = C42A2A98157E75BF002B8018 /* WSLHTMLEntities-Prefix.pch */; settings = {ATTRIBUTES = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
