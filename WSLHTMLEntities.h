@@ -11,5 +11,6 @@
 @interface WSLHTMLEntities : NSObject
 
 +(NSString*)convertHTMLtoString:(NSString*)html;
+-(NSString*)convertHTMLtoString:(NSString*)html;
 
 @end

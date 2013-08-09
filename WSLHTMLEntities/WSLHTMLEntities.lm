@@ -12,6 +12,8 @@
 %}
 
 %option noyywrap prefix="WSL"
+%option reentrant
+%option header-file="WSLHTMLEntities/WSLHTMLEntities-lex.h"
 
 %{
 

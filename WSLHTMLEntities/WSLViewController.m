@@ -50,8 +50,9 @@
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         NSDate* startTime = [NSDate date];
         int loop;
+        WSLHTMLEntities* parser = [[WSLHTMLEntities alloc] init];
         for (loop = 0; loop < 10000; loop++) {
-            [WSLHTMLEntities convertHTMLtoString:stringToParse];
+            [parser convertHTMLtoString:stringToParse];
         }
         NSDate* endTime = [NSDate date];
         

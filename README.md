@@ -32,8 +32,14 @@ There's only one method:
 
 I'm sure you can figure out how to use it.
 
-One gotcha: because Flex uses static variables, as it currently stands
-it's not thread-safe.
+You can also use the instance method if you like:
+
+WSLHTMLEntities* parser = [[WSLHTMLEntities alloc] init];
+NSString* out = [parser convertHTMLtoString:in];
+
+This may be slightly quicker if you're processing lots of strings.
+
+WSLHTMLEntities is now thread-safe.
 
 Maintenance
 ===========
