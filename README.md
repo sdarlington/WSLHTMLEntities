@@ -6,10 +6,20 @@ Convert HTML Entities like &amp;rsaquo; to their unicode equivalent.
 Adding to your project
 ======================
 
-If you're using iOS 5 or above and are happy with ARC, you can just add
-the libWSLHTMLEntities.a file to your project and then you're good to
-go. The other target, called "WSLHTMLEntities Sample" just shows you
-how to use the code.
+If you're using iOS 5 or above and are happy with ARC, it's as simple as:
+
+1. Drag the WSLHTMLEntities.xcodeproj file to your project
+2. Switch to the "Build Phases" project section
+3. Add WSLHTMLEntities to "Target Dependencies"
+4. Add libWSLHTMLEntities.a to "Link Binary With Libraries"
+
+You can see an example in the same project. Another target, called
+"WSLHTMLEntities Sample," just shows you how to use the code.
+
+There is a second target for the library called "WSLHTMLEntities (Fast)."
+This is, as the name suggests, a faster version. Unless performance is
+absolutely critical it's not worth the significantly larger binary
+that this option produces.
 
 If you want to do it the hard, old way you just need to copy the
 following four files -- or at least references to them -- into your
