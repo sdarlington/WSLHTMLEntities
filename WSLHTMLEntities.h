@@ -10,7 +10,20 @@
 
 @interface WSLHTMLEntities : NSObject
 
+/**
+ * Converts HTML entities in a string to their unicode equivalent
+ *
+ * @param html A string possibly containing HTML entities.
+ * @return A string with the entities converted to unicode.
+ */
 +(NSString*)convertHTMLtoString:(NSString*)html;
+
+/**
+ * Converts HTML entities in a string to their unicode equivalent
+ *
+ * @param html A string possibly containing HTML entities.
+ * @return A string with the entities converted to unicode.
+ */
 -(NSString*)convertHTMLtoString:(NSString*)html;
 
 @end
