@@ -8,6 +8,7 @@
 
 #import "WSLViewController.h"
 #import "WSLHTMLEntities.h"
+#import "GTMNSString+HTML.h"
 
 @interface WSLViewController ()
 
@@ -58,7 +59,40 @@
         
         NSTimeInterval executionTime = [endTime timeIntervalSinceDate:startTime];
         dispatch_sync(dispatch_get_main_queue(), ^{
-            self.timingLabel.text = [NSString stringWithFormat:@"%d iterations took %f", loop, executionTime];
+            self.timingLabel.text = [NSString stringWithFormat:@"WSL: %d iterations took %f", loop, executionTime];
+        });
+        
+        // Next try with Google
+        startTime = [NSDate date];
+        for (loop = 0; loop < 10000; loop++) {
+            [stringToParse gtm_stringByUnescapingFromHTML];
+        }
+        endTime = [NSDate date];
+        
+        executionTime = [endTime timeIntervalSinceDate:startTime];
+        dispatch_sync(dispatch_get_main_queue(), ^{
+            self.timingLabel2.text = [NSString stringWithFormat:@"Google: %d iterations took %f", loop, executionTime];
+        });
+        
+        // Finally try using NSAttributedString (in iOS7)
+        // needs to be called on the main thread
+        dispatch_sync(dispatch_get_main_queue(), ^{
+            NSDate* startTime = [NSDate date];
+            NSData* dataToParse = [stringToParse dataUsingEncoding:NSISOLatin1StringEncoding];
+            int loop;
+            // only loop 1000 times as this is really slow and *very* memory intensive (i.e., not recommended)
+            for (loop = 0; loop < 1000; loop++) {
+                // the "convert to NSData" as that's not necessary with the other two
+                // converters
+                NSError* error = nil;
+                [[NSAttributedString alloc] initWithData:dataToParse
+                                                 options:@{NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType }
+                                      documentAttributes:nil
+                                                   error:&error];
+            }
+            NSDate* endTime = [NSDate date];
+            NSTimeInterval executionTime = [endTime timeIntervalSinceDate:startTime];
+            self.timingLabel3.text = [NSString stringWithFormat:@"NS: %d iterations took %f", loop, executionTime];
         });
     });
 }

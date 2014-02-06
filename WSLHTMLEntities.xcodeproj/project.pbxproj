@@ -21,7 +21,8 @@
 		C479086D17B5702900799A3B /* WSLHTMLEntities.h in Headers */ = {isa = PBXBuildFile; fileRef = C42A2AA7157E761E002B8018 /* WSLHTMLEntities.h */; settings = {ATTRIBUTES = (); }; };
 		C479086E17B5702900799A3B /* WSLHTMLEntityDefinitions.h in Headers */ = {isa = PBXBuildFile; fileRef = C49912AF158365AC0000E0AD /* WSLHTMLEntityDefinitions.h */; settings = {ATTRIBUTES = (); }; };
 		C479086F17B5702900799A3B /* WSLHTMLEntities-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = C42A2A98157E75BF002B8018 /* WSLHTMLEntities-Prefix.pch */; settings = {ATTRIBUTES = (); }; };
-		C479087D17B570FC00799A3B /* libWSLHTMLEntities.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C497F2CF15AAE43600DAB756 /* libWSLHTMLEntities.a */; };
+		C47EE16F18A3F05D001C9D70 /* GTMNSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = C47EE16E18A3F05D001C9D70 /* GTMNSString+HTML.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C47EE17318A3FA8B001C9D70 /* libWSLHTMLEntities.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C497F2CF15AAE43600DAB756 /* libWSLHTMLEntities.a */; };
 		C497F2D015AAE43600DAB756 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C42A2A8C157E75BF002B8018 /* Foundation.framework */; };
 		C497F2DA15AAE4AA00DAB756 /* WSLHTMLEntities.h in Headers */ = {isa = PBXBuildFile; fileRef = C42A2AA7157E761E002B8018 /* WSLHTMLEntities.h */; settings = {ATTRIBUTES = (); }; };
 		C497F2DB15AAE4C100DAB756 /* WSLHTMLEntityDefinitions.h in Headers */ = {isa = PBXBuildFile; fileRef = C49912AF158365AC0000E0AD /* WSLHTMLEntityDefinitions.h */; settings = {ATTRIBUTES = (); }; };
@@ -31,7 +32,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		C479087B17B570F600799A3B /* PBXContainerItemProxy */ = {
+		C47EE17418A3FA90001C9D70 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C42A2A7D157E75BE002B8018 /* Project object */;
 			proxyType = 1;
@@ -57,6 +58,9 @@
 		C42A2AA7157E761E002B8018 /* WSLHTMLEntities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WSLHTMLEntities.h; path = ../WSLHTMLEntities.h; sourceTree = "<group>"; };
 		C42A2AA8157E761E002B8018 /* WSLHTMLEntities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSLHTMLEntities.m; sourceTree = "<group>"; };
 		C479087317B5702900799A3B /* libWSLHTMLEntities (Fast).a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libWSLHTMLEntities (Fast).a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C47EE16C18A3F05D001C9D70 /* GTMDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMDefines.h; sourceTree = "<group>"; };
+		C47EE16D18A3F05D001C9D70 /* GTMNSString+HTML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GTMNSString+HTML.h"; sourceTree = "<group>"; };
+		C47EE16E18A3F05D001C9D70 /* GTMNSString+HTML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GTMNSString+HTML.m"; sourceTree = "<group>"; };
 		C497F2CF15AAE43600DAB756 /* libWSLHTMLEntities.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libWSLHTMLEntities.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C49912AD15829D430000E0AD /* WSLHTMLEntities.lm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.lex; path = WSLHTMLEntities.lm; sourceTree = "<group>"; };
 		C49912AF158365AC0000E0AD /* WSLHTMLEntityDefinitions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WSLHTMLEntityDefinitions.h; sourceTree = "<group>"; };
@@ -68,7 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C479087D17B570FC00799A3B /* libWSLHTMLEntities.a in Frameworks */,
+				C47EE17318A3FA8B001C9D70 /* libWSLHTMLEntities.a in Frameworks */,
 				C42A2A8B157E75BF002B8018 /* UIKit.framework in Frameworks */,
 				C42A2A8D157E75BF002B8018 /* Foundation.framework in Frameworks */,
 				C42A2A8F157E75BF002B8018 /* CoreGraphics.framework in Frameworks */,
@@ -132,6 +136,9 @@
 				C42A2A9C157E75BF002B8018 /* MainStoryboard.storyboard */,
 				C42A2A9F157E75BF002B8018 /* WSLViewController.h */,
 				C42A2AA0157E75BF002B8018 /* WSLViewController.m */,
+				C47EE16C18A3F05D001C9D70 /* GTMDefines.h */,
+				C47EE16D18A3F05D001C9D70 /* GTMNSString+HTML.h */,
+				C47EE16E18A3F05D001C9D70 /* GTMNSString+HTML.m */,
 				C42A2A91157E75BF002B8018 /* Supporting Files */,
 			);
 			name = "WSLHTMLEntities Sample";
@@ -199,7 +206,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				C479087C17B570F600799A3B /* PBXTargetDependency */,
+				C47EE17518A3FA90001C9D70 /* PBXTargetDependency */,
 			);
 			name = "WSLHTMLEntities Sample";
 			productName = WSLHTMLEntities;
@@ -287,6 +294,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C42A2A97157E75BF002B8018 /* main.m in Sources */,
+				C47EE16F18A3F05D001C9D70 /* GTMNSString+HTML.m in Sources */,
 				C42A2A9B157E75BF002B8018 /* WSLAppDelegate.m in Sources */,
 				C42A2AA1157E75BF002B8018 /* WSLViewController.m in Sources */,
 			);
@@ -313,10 +321,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		C479087C17B570F600799A3B /* PBXTargetDependency */ = {
+		C47EE17518A3FA90001C9D70 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = C497F2CE15AAE43600DAB756 /* WSLHTMLEntities */;
-			targetProxy = C479087B17B570F600799A3B /* PBXContainerItemProxy */;
+			targetProxy = C47EE17418A3FA90001C9D70 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
