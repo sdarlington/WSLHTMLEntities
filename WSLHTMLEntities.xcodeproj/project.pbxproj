@@ -61,6 +61,9 @@
 		C49912AD15829D430000E0AD /* WSLHTMLEntities.lm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.lex; path = WSLHTMLEntities.lm; sourceTree = "<group>"; };
 		C49912AF158365AC0000E0AD /* WSLHTMLEntityDefinitions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WSLHTMLEntityDefinitions.h; sourceTree = "<group>"; };
 		C49912B41583885B0000E0AD /* genEntitiesLexer.pl */ = {isa = PBXFileReference; lastKnownFileType = text.script.perl; path = genEntitiesLexer.pl; sourceTree = "<group>"; };
+		C4E2EFB718AE19A100FD3828 /* WSLHTMLEntities.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = WSLHTMLEntities.podspec; sourceTree = SOURCE_ROOT; };
+		C4E2EFBA18AE4A5200FD3828 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = SOURCE_ROOT; };
+		C4E2EFBB18AE4A5200FD3828 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +104,9 @@
 				C497F2E215AAE63900DAB756 /* WSLHTMLEntities Library */,
 				C42A2A89157E75BF002B8018 /* Frameworks */,
 				C42A2A87157E75BF002B8018 /* Products */,
+				C4E2EFB718AE19A100FD3828 /* WSLHTMLEntities.podspec */,
+				C4E2EFBA18AE4A5200FD3828 /* LICENSE */,
+				C4E2EFBB18AE4A5200FD3828 /* README.md */,
 			);
 			sourceTree = "<group>";
 		};
