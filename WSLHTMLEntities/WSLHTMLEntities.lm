@@ -13,7 +13,6 @@
 
 %option noyywrap nounput noinput prefix="WSL"
 %option reentrant
-%option header-file="WSLHTMLEntities/WSLHTMLEntities-lex.h"
 
 %{
 

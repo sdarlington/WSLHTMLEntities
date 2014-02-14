@@ -1,6 +1,3 @@
-# Flex generated files
-WSLHTMLEntities-lex.h
-
 # Xcode
 build/*
 *.pbxuser
