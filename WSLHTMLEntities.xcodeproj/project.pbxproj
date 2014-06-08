@@ -22,6 +22,9 @@
 		C479086E17B5702900799A3B /* WSLHTMLEntityDefinitions.h in Headers */ = {isa = PBXBuildFile; fileRef = C49912AF158365AC0000E0AD /* WSLHTMLEntityDefinitions.h */; settings = {ATTRIBUTES = (); }; };
 		C479086F17B5702900799A3B /* WSLHTMLEntities-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = C42A2A98157E75BF002B8018 /* WSLHTMLEntities-Prefix.pch */; settings = {ATTRIBUTES = (); }; };
 		C479087D17B570FC00799A3B /* libWSLHTMLEntities.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C497F2CF15AAE43600DAB756 /* libWSLHTMLEntities.a */; };
+		C48EDFAF19439F6000376915 /* WSLHTMLEntities_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = C48EDFAE19439F6000376915 /* WSLHTMLEntities_Tests.m */; };
+		C48EDFB019439F6000376915 /* libWSLHTMLEntities.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C497F2CF15AAE43600DAB756 /* libWSLHTMLEntities.a */; };
+		C48EDFB71943A16B00376915 /* sample.plist in Resources */ = {isa = PBXBuildFile; fileRef = C48EDFB61943A16B00376915 /* sample.plist */; };
 		C497F2D015AAE43600DAB756 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C42A2A8C157E75BF002B8018 /* Foundation.framework */; };
 		C497F2DA15AAE4AA00DAB756 /* WSLHTMLEntities.h in Headers */ = {isa = PBXBuildFile; fileRef = C42A2AA7157E761E002B8018 /* WSLHTMLEntities.h */; settings = {ATTRIBUTES = (); }; };
 		C497F2DB15AAE4C100DAB756 /* WSLHTMLEntityDefinitions.h in Headers */ = {isa = PBXBuildFile; fileRef = C49912AF158365AC0000E0AD /* WSLHTMLEntityDefinitions.h */; settings = {ATTRIBUTES = (); }; };
@@ -32,6 +35,20 @@
 
 /* Begin PBXContainerItemProxy section */
 		C479087B17B570F600799A3B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C42A2A7D157E75BE002B8018 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C497F2CE15AAE43600DAB756;
+			remoteInfo = WSLHTMLEntities;
+		};
+		C48EDFB119439F6000376915 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C42A2A7D157E75BE002B8018 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C497F2CE15AAE43600DAB756;
+			remoteInfo = WSLHTMLEntities;
+		};
+		C48EDFB81943A24C00376915 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C42A2A7D157E75BE002B8018 /* Project object */;
 			proxyType = 1;
@@ -57,6 +74,10 @@
 		C42A2AA7157E761E002B8018 /* WSLHTMLEntities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WSLHTMLEntities.h; path = ../WSLHTMLEntities.h; sourceTree = "<group>"; };
 		C42A2AA8157E761E002B8018 /* WSLHTMLEntities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSLHTMLEntities.m; sourceTree = "<group>"; };
 		C479087317B5702900799A3B /* libWSLHTMLEntities (Fast).a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libWSLHTMLEntities (Fast).a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C48EDFAA19439F6000376915 /* WSLHTMLEntities Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "WSLHTMLEntities Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C48EDFAD19439F6000376915 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C48EDFAE19439F6000376915 /* WSLHTMLEntities_Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WSLHTMLEntities_Tests.m; sourceTree = "<group>"; };
+		C48EDFB61943A16B00376915 /* sample.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = sample.plist; sourceTree = "<group>"; };
 		C497F2CF15AAE43600DAB756 /* libWSLHTMLEntities.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libWSLHTMLEntities.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C49912AD15829D430000E0AD /* WSLHTMLEntities.lm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.lex; path = WSLHTMLEntities.lm; sourceTree = "<group>"; };
 		C49912AF158365AC0000E0AD /* WSLHTMLEntityDefinitions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WSLHTMLEntityDefinitions.h; sourceTree = "<group>"; };
@@ -86,6 +107,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C48EDFA719439F6000376915 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C48EDFB019439F6000376915 /* libWSLHTMLEntities.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C497F2CC15AAE43600DAB756 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -102,6 +131,7 @@
 			children = (
 				C42A2A90157E75BF002B8018 /* WSLHTMLEntities Sample */,
 				C497F2E215AAE63900DAB756 /* WSLHTMLEntities Library */,
+				C48EDFAB19439F6000376915 /* WSLHTMLEntities Tests */,
 				C42A2A89157E75BF002B8018 /* Frameworks */,
 				C42A2A87157E75BF002B8018 /* Products */,
 				C4E2EFB718AE19A100FD3828 /* WSLHTMLEntities.podspec */,
@@ -116,6 +146,7 @@
 				C42A2A86157E75BF002B8018 /* WSLHTMLEntities Sample.app */,
 				C497F2CF15AAE43600DAB756 /* libWSLHTMLEntities.a */,
 				C479087317B5702900799A3B /* libWSLHTMLEntities (Fast).a */,
+				C48EDFAA19439F6000376915 /* WSLHTMLEntities Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -151,6 +182,24 @@
 				C42A2A93157E75BF002B8018 /* InfoPlist.strings */,
 				C42A2A96157E75BF002B8018 /* main.m */,
 				C42A2A98157E75BF002B8018 /* WSLHTMLEntities-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C48EDFAB19439F6000376915 /* WSLHTMLEntities Tests */ = {
+			isa = PBXGroup;
+			children = (
+				C48EDFAE19439F6000376915 /* WSLHTMLEntities_Tests.m */,
+				C48EDFAC19439F6000376915 /* Supporting Files */,
+			);
+			path = "WSLHTMLEntities Tests";
+			sourceTree = "<group>";
+		};
+		C48EDFAC19439F6000376915 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C48EDFAD19439F6000376915 /* Info.plist */,
+				C48EDFB61943A16B00376915 /* sample.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -229,6 +278,25 @@
 			productReference = C479087317B5702900799A3B /* libWSLHTMLEntities (Fast).a */;
 			productType = "com.apple.product-type.library.static";
 		};
+		C48EDFA919439F6000376915 /* WSLHTMLEntities Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C48EDFB519439F6000376915 /* Build configuration list for PBXNativeTarget "WSLHTMLEntities Tests" */;
+			buildPhases = (
+				C48EDFA619439F6000376915 /* Sources */,
+				C48EDFA719439F6000376915 /* Frameworks */,
+				C48EDFA819439F6000376915 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C48EDFB219439F6000376915 /* PBXTargetDependency */,
+				C48EDFB91943A24C00376915 /* PBXTargetDependency */,
+			);
+			name = "WSLHTMLEntities Tests";
+			productName = "WSLHTMLEntities Tests";
+			productReference = C48EDFAA19439F6000376915 /* WSLHTMLEntities Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		C497F2CE15AAE43600DAB756 /* WSLHTMLEntities */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C497F2D715AAE43600DAB756 /* Build configuration list for PBXNativeTarget "WSLHTMLEntities" */;
@@ -255,6 +323,12 @@
 				CLASSPREFIX = WSL;
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Wandle Software Limited";
+				TargetAttributes = {
+					C48EDFA919439F6000376915 = {
+						CreatedOnToolsVersion = 6.0;
+						TestTargetID = C497F2CE15AAE43600DAB756;
+					};
+				};
 			};
 			buildConfigurationList = C42A2A80157E75BE002B8018 /* Build configuration list for PBXProject "WSLHTMLEntities" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -271,6 +345,7 @@
 				C42A2A85157E75BF002B8018 /* WSLHTMLEntities Sample */,
 				C497F2CE15AAE43600DAB756 /* WSLHTMLEntities */,
 				C479086617B5702900799A3B /* WSLHTMLEntities (Fast) */,
+				C48EDFA919439F6000376915 /* WSLHTMLEntities Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -282,6 +357,14 @@
 			files = (
 				C42A2A95157E75BF002B8018 /* InfoPlist.strings in Resources */,
 				C42A2A9E157E75BF002B8018 /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C48EDFA819439F6000376915 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C48EDFB71943A16B00376915 /* sample.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,6 +390,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C48EDFA619439F6000376915 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C48EDFAF19439F6000376915 /* WSLHTMLEntities_Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C497F2CB15AAE43600DAB756 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -323,6 +414,16 @@
 			isa = PBXTargetDependency;
 			target = C497F2CE15AAE43600DAB756 /* WSLHTMLEntities */;
 			targetProxy = C479087B17B570F600799A3B /* PBXContainerItemProxy */;
+		};
+		C48EDFB219439F6000376915 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C497F2CE15AAE43600DAB756 /* WSLHTMLEntities */;
+			targetProxy = C48EDFB119439F6000376915 /* PBXContainerItemProxy */;
+		};
+		C48EDFB91943A24C00376915 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C497F2CE15AAE43600DAB756 /* WSLHTMLEntities */;
+			targetProxy = C48EDFB81943A24C00376915 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -458,6 +559,59 @@
 			};
 			name = Release;
 		};
+		C48EDFB319439F6000376915 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "WSLHTMLEntities Tests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				METAL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C48EDFB419439F6000376915 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "WSLHTMLEntities Tests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				METAL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		C497F2D815AAE43600DAB756 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -511,6 +665,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		C48EDFB519439F6000376915 /* Build configuration list for PBXNativeTarget "WSLHTMLEntities Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C48EDFB319439F6000376915 /* Debug */,
+				C48EDFB419439F6000376915 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 		C497F2D715AAE43600DAB756 /* Build configuration list for PBXNativeTarget "WSLHTMLEntities" */ = {
 			isa = XCConfigurationList;
