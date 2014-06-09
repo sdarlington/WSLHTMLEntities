@@ -12,6 +12,5 @@
 
 @property (weak, nonatomic) IBOutlet UITextView *inputTextField;
 @property (weak, nonatomic) IBOutlet UITextView *outputTextField;
-@property (strong, nonatomic) IBOutlet UILabel *timingLabel;
 
 @end

@@ -27,7 +27,6 @@
 {
     [self setInputTextField:nil];
     [self setOutputTextField:nil];
-    [self setTimingLabel:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
@@ -43,24 +42,6 @@
 - (void)textViewDidEndEditing:(UITextView *)textView {
     // parse string for display...
     self.outputTextField.text = [WSLHTMLEntities convertHTMLtoString:textView.text];
-    
-    NSString* stringToParse = [textView.text copy];
-    
-    // and then in a loop for performance measurement...
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        NSDate* startTime = [NSDate date];
-        int loop;
-        WSLHTMLEntities* parser = [[WSLHTMLEntities alloc] init];
-        for (loop = 0; loop < 10000; loop++) {
-            [parser convertHTMLtoString:stringToParse];
-        }
-        NSDate* endTime = [NSDate date];
-        
-        NSTimeInterval executionTime = [endTime timeIntervalSinceDate:startTime];
-        dispatch_sync(dispatch_get_main_queue(), ^{
-            self.timingLabel.text = [NSString stringWithFormat:@"%d iterations took %f", loop, executionTime];
-        });
-    });
 }
 
 - (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text {
