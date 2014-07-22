@@ -7,7 +7,8 @@
 There are three ways of adding `WSLHTMLEntities` to your project:
 
 * [CocoaPods](http://cocoapods.org)
-* Adding the library to your project as a dependency
+* Adding the static library to your project as a dependency
+* Adding the framework to your project as a dependency
 * Drag-and-drop a few files manually
 
 ## CocoaPods
@@ -32,6 +33,17 @@ If you're using iOS 5 or above and are happy with ARC, it's as simple as:
 You can see an example in the same project. Another target, called "WSLHTMLEntities Sample," just shows you how to use the code.
 
 There is a second target for the library called "WSLHTMLEntities (Fast)." This is, as the name suggests, a faster version. Unless performance is absolutely critical it's not worth the significantly larger binary that this option produces.
+
+## Framework as a dependency
+
+If you're using iOS 8 or above, it's as simple as:
+
+1. Drag the WSLHTMLEntities.xcodeproj file to your project
+2. Switch to the "Build Phases" project section
+3. Add WSLHTMLEntitiesFramework to "Target Dependencies"
+4. Add WSLHTMLEntitiesFramework.framework to "Link Binary With Libraries"
+
+You can see an example in the same project. Another target, called "WSLHTMLEntities Sample Framework," just shows you how to use the code.
 
 ## Adding files manually
 
