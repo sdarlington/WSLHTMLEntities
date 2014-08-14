@@ -13,7 +13,6 @@
 
 %option noyywrap nounput noinput prefix="WSL"
 %option reentrant
-%option header-file="WSLHTMLEntities/WSLHTMLEntities-lex.h"
 
 %{
 
@@ -270,9 +269,9 @@
 &hearts;   { return WSL_ENTITY_hearts; }
 &diams;   { return WSL_ENTITY_diams; }
 
-&#[0-9]+;  { return WSL_ENTITIY_NUMBER; }
-[^&]+ { return WSL_ENTITIY_NOMATCH; } 
-. { return WSL_ENTITIY_NOMATCH; }
+&#[0-9]+;  { return WSL_ENTITY_NUMBER; }
+[^&]+ { return WSL_ENTITY_NOMATCH; }
+. { return WSL_ENTITY_NOMATCH; }
 
 %%
 
