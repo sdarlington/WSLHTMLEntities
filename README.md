@@ -21,6 +21,8 @@ pod 'WSLHTMLEntities'
 
 There is no step two.
 
+Note that if you use the `inhibit_all_warnings!` directive the library will likely fail to build. This is because CocoaPods [adds the same directives used for the Objective-C compilers whether or not it's building Objective-C code](https://github.com/CocoaPods/CocoaPods/issues/1020). This issue was closed nearly a year ago but still appears not to be fixed.
+
 ## Library as a dependency
 
 If you're using iOS 5 or above and are happy with ARC, it's as simple as:
