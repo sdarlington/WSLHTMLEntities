@@ -28,6 +28,7 @@
 		C438CC4C197EBED700965174 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C42A2A93157E75BF002B8018 /* InfoPlist.strings */; };
 		C438CC4D197EBED700965174 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C42A2A9C157E75BF002B8018 /* MainStoryboard.storyboard */; };
 		C438CC55197EBEF700965174 /* WSLHTMLEntitiesFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C417ACF3196C529600A1A69C /* WSLHTMLEntitiesFramework.framework */; };
+		C44446EA19BB2380007C4E33 /* WSLWebSiteTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AB09B219BA1284002FE2C9 /* WSLWebSiteTitle.swift */; };
 		C479086817B5702900799A3B /* WSLHTMLEntities.m in Sources */ = {isa = PBXBuildFile; fileRef = C42A2AA8157E761E002B8018 /* WSLHTMLEntities.m */; };
 		C479086917B5702900799A3B /* WSLHTMLEntities.lm in Sources */ = {isa = PBXBuildFile; fileRef = C49912AD15829D430000E0AD /* WSLHTMLEntities.lm */; };
 		C479086B17B5702900799A3B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C42A2A8C157E75BF002B8018 /* Foundation.framework */; };
@@ -107,6 +108,8 @@
 		C49912AD15829D430000E0AD /* WSLHTMLEntities.lm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.lex; path = WSLHTMLEntities.lm; sourceTree = "<group>"; };
 		C49912AF158365AC0000E0AD /* WSLHTMLEntityDefinitions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WSLHTMLEntityDefinitions.h; sourceTree = "<group>"; };
 		C49912B41583885B0000E0AD /* genEntitiesLexer.pl */ = {isa = PBXFileReference; lastKnownFileType = text.script.perl; path = genEntitiesLexer.pl; sourceTree = "<group>"; };
+		C4AB09AF19BA1282002FE2C9 /* WSLHTMLEntities Sample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WSLHTMLEntities Sample-Bridging-Header.h"; sourceTree = "<group>"; };
+		C4AB09B219BA1284002FE2C9 /* WSLWebSiteTitle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSLWebSiteTitle.swift; sourceTree = "<group>"; };
 		C4E2EFB718AE19A100FD3828 /* WSLHTMLEntities.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = WSLHTMLEntities.podspec; sourceTree = SOURCE_ROOT; };
 		C4E2EFBA18AE4A5200FD3828 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = SOURCE_ROOT; };
 		C4E2EFBB18AE4A5200FD3828 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = SOURCE_ROOT; };
@@ -232,6 +235,8 @@
 				C42A2A9C157E75BF002B8018 /* MainStoryboard.storyboard */,
 				C42A2A9F157E75BF002B8018 /* WSLViewController.h */,
 				C42A2AA0157E75BF002B8018 /* WSLViewController.m */,
+				C4AB09B219BA1284002FE2C9 /* WSLWebSiteTitle.swift */,
+				C4AB09AF19BA1282002FE2C9 /* WSLHTMLEntities Sample-Bridging-Header.h */,
 				C42A2A91157E75BF002B8018 /* Supporting Files */,
 			);
 			name = "WSLHTMLEntities Sample";
@@ -517,6 +522,7 @@
 				C42A2A97157E75BF002B8018 /* main.m in Sources */,
 				C42A2A9B157E75BF002B8018 /* WSLAppDelegate.m in Sources */,
 				C42A2AA1157E75BF002B8018 /* WSLViewController.m in Sources */,
+				C44446EA19BB2380007C4E33 /* WSLWebSiteTitle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -615,6 +621,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -629,6 +636,8 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -649,6 +658,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -660,6 +670,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -731,11 +742,16 @@
 		C42A2AA5157E75BF002B8018 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WSLHTMLEntities/WSLHTMLEntities-Prefix.pch";
 				INFOPLIST_FILE = "WSLHTMLEntities/WSLHTMLEntities-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "WSLHTMLEntities/WSLHTMLEntities Sample-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -743,11 +759,15 @@
 		C42A2AA6157E75BF002B8018 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WSLHTMLEntities/WSLHTMLEntities-Prefix.pch";
 				INFOPLIST_FILE = "WSLHTMLEntities/WSLHTMLEntities-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "WSLHTMLEntities/WSLHTMLEntities Sample-Bridging-Header.h";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -757,9 +777,15 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WSLHTMLEntities/WSLHTMLEntities-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+					FRAMEWORK,
+				);
 				INFOPLIST_FILE = "WSLHTMLEntities Sample Framework-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_LDFLAGS = "";
+				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)";
 				PRODUCT_NAME = "WSLHTMLEntities Sample Framework";
 				WRAPPER_EXTENSION = app;
 			};
@@ -773,6 +799,7 @@
 				INFOPLIST_FILE = "WSLHTMLEntities Sample Framework-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_LDFLAGS = "";
+				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)";
 				PRODUCT_NAME = "WSLHTMLEntities Sample Framework";
 				WRAPPER_EXTENSION = app;
 			};
@@ -781,26 +808,33 @@
 		C479087117B5702900799A3B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DSTROOT = /tmp/WSLHTMLEntities.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WSLHTMLEntities/WSLHTMLEntities-Prefix.pch";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LEXFLAGS = "-Cf";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "WSLHTMLEntities (Fast)";
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "WSLHTMLEntities/WSLHTMLEntities (Fast)-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		C479087217B5702900799A3B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DSTROOT = /tmp/WSLHTMLEntities.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WSLHTMLEntities/WSLHTMLEntities-Prefix.pch";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LEXFLAGS = "-Cf";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "WSLHTMLEntities (Fast)";
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "WSLHTMLEntities/WSLHTMLEntities (Fast)-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -860,24 +894,33 @@
 		C497F2D815AAE43600DAB756 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DSTROOT = /tmp/WSLHTMLEntities.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WSLHTMLEntities/WSLHTMLEntities-Prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "WSLHTMLEntities/WSLHTMLEntities-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		C497F2D915AAE43600DAB756 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DSTROOT = /tmp/WSLHTMLEntities.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WSLHTMLEntities/WSLHTMLEntities-Prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "WSLHTMLEntities/WSLHTMLEntities-Bridging-Header.h";
 			};
 			name = Release;
 		};

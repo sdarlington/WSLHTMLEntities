@@ -8,6 +8,9 @@
 
 #import "WSLViewController.h"
 #import "WSLHTMLEntities.h"
+#ifndef FRAMEWORK
+#import "WSLHTMLEntities_Sample-Swift.h"
+#endif
 
 @interface WSLViewController ()
 
@@ -17,13 +20,19 @@
 @synthesize inputTextField;
 @synthesize outputTextField;
 
+#ifdef FRAMEWORK
+-(void)viewDidLoad {
+    [super viewDidLoad];
+    self.getTitleButton.hidden = YES;
+}
+#endif
+
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
 
 #pragma mark - UITextFieldDelegate
-
 
 - (void)textViewDidEndEditing:(UITextView *)textView {
     // parse string for display...
@@ -40,4 +49,36 @@
     }
 }
 
+- (IBAction)titleForURL:(id)sender {
+#ifndef FRAMEWORK
+    UIAlertView* getURL = [[UIAlertView alloc] initWithTitle:@"Get URL"
+                                                     message:@"Enter URL"
+                                                    delegate:self
+                                           cancelButtonTitle:@"Cancel"
+                                           otherButtonTitles:@"Get Title", nil];
+    getURL.alertViewStyle = UIAlertViewStylePlainTextInput;
+    [getURL show];
+#endif
+}
+
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+#ifndef FRAMEWORK
+    if (buttonIndex == [alertView cancelButtonIndex]) {
+        return;
+    }
+    
+    WSLWebSiteTitle* t = [[WSLWebSiteTitle alloc] initWithUrl:[[alertView textFieldAtIndex:0] text]
+                                               operationQueue:[NSOperationQueue mainQueue]];
+    [t title:^(NSString* title, NSError* error) {
+        if (!error) {
+            UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Results"
+                                                            message:[NSString stringWithFormat:@"Title: %@", title]
+                                                           delegate:nil
+                                                  cancelButtonTitle:@"OK"
+                                                  otherButtonTitles:nil];
+            [alert show];
+        }
+    }];
+#endif
+}
 @end

@@ -8,9 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface WSLViewController : UIViewController
+@interface WSLViewController : UIViewController<UIAlertViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextView *inputTextField;
 @property (weak, nonatomic) IBOutlet UITextView *outputTextField;
+@property (strong, nonatomic) IBOutlet UIButton *getTitleButton;
+
+- (IBAction)titleForURL:(id)sender;
 
 @end
