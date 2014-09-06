@@ -77,8 +77,8 @@ char *WSLget_text (yyscan_t yyscanner );
         // TODO: there has to be a more efficient way of doing this...
         switch (expression) {
             case WSL_ENTITY_NOMATCH:
-                [output appendFormat:@"%@", [NSString stringWithCString:WSLget_text(scanner)
-                                                               encoding:NSISOLatin1StringEncoding]];
+                [output appendString:[NSString stringWithCString:WSLget_text(scanner)
+                                                        encoding:NSISOLatin1StringEncoding]];
                 break;
             case WSL_ENTITY_NUMBER:
                 expression = atoi(&WSLget_text(scanner)[2]);
