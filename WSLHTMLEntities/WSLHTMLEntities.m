@@ -81,17 +81,14 @@ char *WSLget_text (yyscan_t yyscanner );
                                                         encoding:NSISOLatin1StringEncoding]];
                 break;
             case WSL_ENTITY_HEX_NUMBER:
-            {
-                NSScanner* hexExtractorScanner = [NSScanner scannerWithString:[NSString stringWithUTF8String:WSLget_text(scanner)]];
-                [hexExtractorScanner setScanLocation:3]; // bypass '&#x' characters
-                unsigned int hexExpression;
-                if ([hexExtractorScanner scanHexInt:&hexExpression]) {
-                    [output appendFormat:@"%C", (unichar)hexExpression];
+                // +3 to move past the '&#x'
+                expression = strtol(WSLget_text(scanner) + 3, NULL, 16);
+                if (expression == 0 && errno == EINVAL) {
+                    // TODO: the lexer should always return a valid hex number but we should still have some error handling here
                 }
                 else {
-                    // TODO: The parser should always return a valid hex string but we should still have some error handling here
+                    [output appendFormat:@"%C", (unichar)expression];
                 }
-            }
                 break;
             case WSL_ENTITY_NUMBER:
                 expression = atoi(&WSLget_text(scanner)[2]);
