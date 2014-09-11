@@ -89,6 +89,7 @@ It's used in the following apps:
 
 * [Yummy](http://www.wandlesoftware.com/products/yummy)
 * [www.cut](http://www.wandlesoftware.com/products/www-cut)
+* [ShareEverywhere](http://www.wandlesoftware.com/products/shareeverywhere)
 
 Please let me know if you use it in yours.
 
