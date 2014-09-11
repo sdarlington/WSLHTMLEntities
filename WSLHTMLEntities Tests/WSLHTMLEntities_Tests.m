@@ -59,6 +59,10 @@
     [self runTestNamed:@"MultiReplacement"];
 }
 
+- (void)testHexReplacement {
+    [self runTestNamed:@"HexNumber"];
+}
+
 - (void)runPerformanceTestFor:(NSString*)test {
     NSString* input = self.sampleText[test][0];
     [self measureBlock:^{

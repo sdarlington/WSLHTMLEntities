@@ -270,6 +270,7 @@
 &diams;   { return WSL_ENTITY_diams; }
 
 &#[0-9]+;  { return WSL_ENTITY_NUMBER; }
+&#[xX][A-Fa-f0-9]+;  { return WSL_ENTITY_HEX_NUMBER; }
 [^&]+ { return WSL_ENTITY_NOMATCH; }
 . { return WSL_ENTITY_NOMATCH; }
 

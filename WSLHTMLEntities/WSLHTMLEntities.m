@@ -80,6 +80,19 @@ char *WSLget_text (yyscan_t yyscanner );
                 [output appendString:[NSString stringWithCString:WSLget_text(scanner)
                                                         encoding:NSISOLatin1StringEncoding]];
                 break;
+            case WSL_ENTITY_HEX_NUMBER:
+            {
+                NSScanner* hexExtractorScanner = [NSScanner scannerWithString:[NSString stringWithUTF8String:WSLget_text(scanner)]];
+                [hexExtractorScanner setScanLocation:3]; // bypass '&#x' characters
+                unsigned int hexExpression;
+                if ([hexExtractorScanner scanHexInt:&hexExpression]) {
+                    [output appendFormat:@"%C", (unichar)hexExpression];
+                }
+                else {
+                    // TODO: The parser should always return a valid hex string but we should still have some error handling here
+                }
+            }
+                break;
             case WSL_ENTITY_NUMBER:
                 expression = atoi(&WSLget_text(scanner)[2]);
                 // fall through so expression is added to string
