@@ -71,7 +71,7 @@ char *WSLget_text (yyscan_t yyscanner );
     const char* text = [html cStringUsingEncoding:NSISOLatin1StringEncoding];
     
     WSL_scan_string(text, scanner);
-    int expression;
+    long expression;
     NSMutableString* output = [NSMutableString string];
     while ((expression = WSLlex(scanner))) {
         // TODO: there has to be a more efficient way of doing this...
