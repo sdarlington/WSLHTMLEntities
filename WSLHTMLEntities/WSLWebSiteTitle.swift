@@ -13,9 +13,9 @@ import Foundation
     let operationQueue:NSOperationQueue
     let url:NSURL
     
-    @objc public init(url:String, operationQueue:NSOperationQueue = NSOperationQueue.mainQueue()) {
+    @objc public init(url:NSURL, operationQueue:NSOperationQueue = NSOperationQueue.mainQueue()) {
         self.operationQueue = operationQueue
-        self.url = NSURL(string: url)
+        self.url = url
     }
     
     @objc public func title(completionHandler:(title:String?,error:NSError?) -> Void) {
@@ -30,7 +30,7 @@ import Foundation
             let httpResponse = response as NSHTTPURLResponse
             if httpResponse.statusCode == 200 {
                 
-                let returnText:NSString = NSString(data:data, encoding:NSUTF8StringEncoding)
+                let returnText:NSString = NSString(data:data, encoding:NSUTF8StringEncoding)!
                 let start = returnText.rangeOfString("<title>", options: .CaseInsensitiveSearch)
                 let end = returnText.rangeOfString("</title>", options: .CaseInsensitiveSearch)
                 
@@ -60,7 +60,7 @@ import Foundation
     // TODO: this should probably be shared between calls
     func titleURLSession() -> NSURLSession {
         let app = NSBundle.mainBundle()
-        let infoDict = app.infoDictionary
+        let infoDict = app.infoDictionary!
         let myName:AnyObject? = infoDict["CFBundleDisplayName"]
         var appName:String = "Unknown"
         if myName is String {

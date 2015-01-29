@@ -67,7 +67,11 @@
         return;
     }
     
-    WSLWebSiteTitle* t = [[WSLWebSiteTitle alloc] initWithUrl:[[alertView textFieldAtIndex:0] text]
+    NSURL* url = [NSURL URLWithString:[[alertView textFieldAtIndex:0] text]];
+    if (!url) {
+        return;
+    }
+    WSLWebSiteTitle* t = [[WSLWebSiteTitle alloc] initWithUrl:url
                                                operationQueue:[NSOperationQueue mainQueue]];
     [t title:^(NSString* title, NSError* error) {
         if (!error) {
