@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "WSLHTMLEntities"
-  s.version      = "1.0.0"
+  s.version      = "1.0.1"
   s.summary      = "Convert HTML Entities like &rsaquo; to their unicode equivalent."
 
   s.description  = <<-DESC
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
   s.author             = "Stephen Darlington"
   s.social_media_url = "http://twitter.com/sdarlington"
   s.platform     = :ios, '5.1'
-  s.source       = { :git => "https://github.com/sdarlington/WSLHTMLEntities.git", :tag => "1.0.0" }
+  s.source       = { :git => "https://github.com/sdarlington/WSLHTMLEntities.git", :tag => "1.0.1" }
   s.source_files  = 'WSLHTMLEntities/WSLHTMLEntit*.{h,m,lm}', 'WSLHTMLEntities.h'
   s.public_header_files = 'WSLHTMLEntities.h'
 end
