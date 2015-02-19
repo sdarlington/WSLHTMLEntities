@@ -63,12 +63,13 @@ char *WSLget_text (yyscan_t yyscanner );
 }
 
 +(NSString*)convertHTMLtoString:(NSString*)html scanner:(yyscan_t)scanner {
-    if (! [html canBeConvertedToEncoding:NSISOLatin1StringEncoding]) {
-        // if it's not UTF8 I'm not sure what to do with it...
-        return html;
+    NSData* d = [html dataUsingEncoding:NSUTF8StringEncoding allowLossyConversion:YES];
+    if (d.length == 0) {
+        return nil;
     }
-    
-    const char* text = [html cStringUsingEncoding:NSISOLatin1StringEncoding];
+    char* text = alloca(d.length + 1);
+    text[d.length] = '\0';
+    memccpy(text, d.bytes, sizeof(char), d.length);
     
     WSL_scan_string(text, scanner);
     long expression;
