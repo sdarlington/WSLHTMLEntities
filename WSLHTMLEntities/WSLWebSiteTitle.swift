@@ -27,7 +27,7 @@ import Foundation
                 return
             }
             
-            let httpResponse = response as NSHTTPURLResponse
+            let httpResponse = response as! NSHTTPURLResponse
             if httpResponse.statusCode == 200 {
                 
                 let returnText:NSString = NSString(data:data, encoding:NSUTF8StringEncoding)!
@@ -64,12 +64,12 @@ import Foundation
         let myName:AnyObject? = infoDict["CFBundleDisplayName"]
         var appName:String = "Unknown"
         if myName is String {
-            appName = myName as String
+            appName = myName as! String
         }
         let myVersion:AnyObject? = infoDict["CFBundleVersion"]
         var appVersionNumber:String = "Unknown"
         if myVersion is String {
-            appVersionNumber = myVersion as String
+            appVersionNumber = myVersion as! String
         }
         
         let config = NSURLSessionConfiguration.ephemeralSessionConfiguration()
