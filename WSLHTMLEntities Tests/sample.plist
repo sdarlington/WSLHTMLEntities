@@ -37,5 +37,15 @@
 		<string>I live in the US and I can&amp;#x27;t get home internet</string>
 		<string>I live in the US and I can&apos;t get home internet</string>
 	</array>
+	<key>MultiByte</key>
+	<array>
+		<string>伊藤忠商事株式会社</string>
+		<string>伊藤忠商事株式会社</string>
+	</array>
+	<key>MultiByteReplacement</key>
+	<array>
+		<string>伊藤忠商事株式会社&amp;amp;Test</string>
+		<string>伊藤忠商事株式会社&amp;Test</string>
+	</array>
 </dict>
 </plist>

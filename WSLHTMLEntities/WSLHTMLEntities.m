@@ -77,9 +77,11 @@ char *WSLget_text (yyscan_t yyscanner );
     while ((expression = WSLlex(scanner))) {
         // TODO: there has to be a more efficient way of doing this...
         switch (expression) {
-            case WSL_ENTITY_NOMATCH:
-                [output appendString:[NSString stringWithCString:WSLget_text(scanner)
-                                                        encoding:NSISOLatin1StringEncoding]];
+            case WSL_ENTITY_NOMATCH: {
+                char * tmp = WSLget_text(scanner);
+                [output appendString:[NSString stringWithCString:tmp
+                                                        encoding:NSUTF8StringEncoding]];
+            }
                 break;
             case WSL_ENTITY_HEX_NUMBER:
                 // +3 to move past the '&#x'

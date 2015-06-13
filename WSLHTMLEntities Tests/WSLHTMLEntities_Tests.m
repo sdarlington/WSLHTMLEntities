@@ -63,6 +63,14 @@
     [self runTestNamed:@"HexNumber"];
 }
 
+- (void)testMultiByteNoReplacement {
+    [self runTestNamed:@"MultiByte"];
+}
+
+- (void)testMultiByteReplacement {
+    [self runTestNamed:@"MultiByteReplacement"];
+}
+
 - (void)runPerformanceTestFor:(NSString*)test {
     NSString* input = self.sampleText[test][0];
     [self measureBlock:^{
