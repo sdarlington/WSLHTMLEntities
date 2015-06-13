@@ -31,15 +31,16 @@ import Foundation
             if httpResponse.statusCode == 200 {
                 
                 let returnText:NSString = NSString(data:data, encoding:NSUTF8StringEncoding)!
-                let start = returnText.rangeOfString("<title>", options: .CaseInsensitiveSearch)
-                let end = returnText.rangeOfString("</title>", options: .CaseInsensitiveSearch)
-                
-                var newTitle:String?
-                if start.location != NSNotFound && end.location != NSNotFound {
-                    let titleRange = NSRange(location:start.location + start.length, length: end.location - start.location - start.length)
-                    newTitle = returnText.substringWithRange(titleRange)
-                }
-                
+
+                let scanner = NSScanner(string: returnText as String)
+                scanner.caseSensitive = false
+                scanner.scanUpToString("<title", intoString:nil)
+                scanner.scanUpToString(">", intoString:nil)
+                scanner.scanString(">", intoString:nil)
+                var newTitleScanner:NSString?
+                scanner.scanUpToString("</title>", intoString:&newTitleScanner)
+                var newTitle = newTitleScanner as String?
+
                 if newTitle != nil {
                     newTitle = WSLHTMLEntities.convertHTMLtoString(newTitle)
                     newTitle = newTitle?.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())

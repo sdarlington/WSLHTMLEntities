@@ -435,6 +435,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = WSL;
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = "Wandle Software Limited";
 				TargetAttributes = {
